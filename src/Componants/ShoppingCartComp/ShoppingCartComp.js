@@ -32,7 +32,7 @@ class ShoppingCartComp extends React.Component{
                 }
             }
                 
-            return axios.post('http://localhost:5000/payment',body)
+            return axios.post('https://shopping-site-online.herokuapp.com/payment',body)
             .then(response=>{
                     console.log('response===>',response);
                     if(response.status===200)

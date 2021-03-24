@@ -9,7 +9,7 @@ export const getAllProductsAsync = (data) =>{
 
 export const getAllProducts = () =>{
     return dispatch =>{
-        axios.get('http://localhost:5000/Products')
+        axios.get('https://shopping-site-online.herokuapp.com/Products')
     .then((proddata)=>{
         let {data} = proddata
         //this.setState({Products:data});
@@ -33,7 +33,7 @@ export const addnewUser = (userdata)=>{
     console.log('userdata===>',userdata);
     const reqbody = {...userdata,_id:userdata.email,cartItems:{}}
     return dispatch =>{
-        axios.post('http://localhost:5000/storeUserData',reqbody)
+        axios.post('https://shopping-site-online.herokuapp.com/storeUserData',reqbody)
         .then((data)=>{
             console.log('data is saved',data);
             dispatch(addnewUserAsync(userdata));
@@ -60,7 +60,7 @@ export const signInAsync = data =>{
 export const signIn =(data)=>{
     console.log("signin data===>",data);
     return dispatch =>{
-        axios.post('http://localhost:5000/validateUser',data)
+        axios.post('https://shopping-site-online.herokuapp.com/validateUser',data)
         .then((res)=>{
             console.log('user validated',res.data);
             dispatch(signInAsync(res.data));
@@ -86,7 +86,7 @@ export const addToCart = (currProduct,cartItemsData,currSize,id) =>{
 
     console.log('cartItems===>addToCart',cartItems);
     return dispatch =>{
-        axios.patch('http://localhost:5000/updateCart/'+id,cartItems)
+        axios.patch('https://shopping-site-online.herokuapp.com/updateCart/'+id,cartItems)
         .then((res)=>{
             console.log('user validated',res);
             if(res.status === 200)
@@ -112,7 +112,7 @@ export const removeFromCart =(id,cartItems,userId)=>{
 
     console.log('cartItems===>removefromCart',cartItems);
     return dispatch =>{
-        axios.patch('http://localhost:5000/updateCart/'+userId,cartItems)
+        axios.patch('https://shopping-site-online.herokuapp.com/updateCart/'+userId,cartItems)
         .then((res)=>{
             if(res.status === 200)
             {
@@ -136,7 +136,7 @@ export const emptyCart =(userId)=>{
 
     console.log('cartItems===>empty Cart',cartItems);
     return dispatch =>{
-        axios.patch('http://localhost:5000/updateCart/'+userId,cartItems)
+        axios.patch('https://shopping-site-online.herokuapp.com/updateCart/'+userId,cartItems)
         .then((res)=>{
             if(res.status === 200)
             {
