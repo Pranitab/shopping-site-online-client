@@ -1,0 +1,45 @@
+.ProductDetailsComp{
+    position: absolute;
+    margin-top: 70px;
+}
+
+.ProductDetailsContainer{
+    display: flex;
+}
+
+.ProductDetailsComp img{
+    width: 320px;
+    height: 480px;
+}
+
+.prod-name{
+    font-size: 25px;
+    color:#3439aa;
+}
+.prod-price{
+    font-size: 20px;
+    display: inline;
+    color: #902d2d;
+}
+ 
+.ProductDetailsComp button{
+    background-color: #eda414;
+    width: 180px;
+    height: 30px;
+    border: 0.5px solid black;
+    margin-top: 10px;
+    border-radius: 5px;
+    pointer-events: visible;
+}
+.button-box{
+    height: 90px;
+    border: 1px solid #d9caca;
+    text-align: center;
+    padding: 30px;
+    margin-left: 130px;
+}
+
+button.disabled{
+    opacity:0.4;
+    pointer-events: none;
+}

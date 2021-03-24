@@ -1,0 +1,12 @@
+img{
+    width:240px;
+    height:340px;
+}
+.ProdTile{
+    background-color: whitesmoke;
+    color: #000000;
+    text-align: center;
+}
+.reviewTxt{
+    font-size: 12px;
+}

@@ -1,0 +1,45 @@
+.HeaderComp{    
+    height: 50px;
+    background-color: #203040;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+.HeaderComp a{
+    text-decoration: none;
+    color: white;
+}
+.HeaderComp a:hover{
+    color: #eda414
+}
+
+.HeaderComp a:first-child{
+    width: 30%;
+}
+.HeaderComp a:last-child{
+    width: 8%;
+    text-align: right;
+}
+.HeaderComp input{
+    width: 50%;
+    height: 22px;
+}
+
+.addToCartBubble{
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 20px;
+    top: -5px;
+    left: 2px;
+    font-size: 13px;
+    text-align: center;
+    background-color: brown;
+    border-radius: 50%;
+}
